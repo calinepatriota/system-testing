@@ -35,4 +35,29 @@ public class Common_Methods {
         String text = (String) ((JavascriptExecutor) driver).executeScript("return arguments[0].innerHTML;",driver.findElement(element));
         return text;
     }
+
+    public void scrollElemento(WebElement element){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public  void scrollPage(WebDriver driver) {
+
+        try {
+            long lastHeight =  (Long) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight");
+
+            while (true) {
+                ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+                Thread.sleep(10000);
+
+                long newHeight = (Long) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight");
+                if (newHeight == lastHeight) {
+                    break;
+                }
+                lastHeight = newHeight;
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
