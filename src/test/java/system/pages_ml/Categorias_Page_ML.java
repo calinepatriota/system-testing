@@ -14,7 +14,7 @@ public class Categorias_Page_ML extends Common_Methods {
 
     By botao_categoria = By.cssSelector("div.nav-menu > ul > li:nth-child(2) > a");
     By botao_eletrodomesticos = By.cssSelector("ul > li:nth-child(2) > div > ul > li:nth-child(5) > a");
-    By produto_exibido = By.cssSelector("#root-app > div > div:nth-child(9) > div > div > div > div > div:nth-child(1) > a > div > h3");
+    By produto_exibido = By.cssSelector("div:nth-child(2) > section > section > div.dynamic-carousel__container--with-link > h2");
 
 
     public void clicar_botao_categoria() {

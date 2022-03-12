@@ -24,7 +24,7 @@ public class Mercado_Livre_Rede_Social_Steps {
     @Então("eu valido que pagina foi redirecionada para a rede social Instagram do Mercado Livre$")
     public void eu_valido_que_pagina_foi_redirecionada_para_a_rede_social_instagram_do_mercado_livre() {
         try {
-            assertEquals("Mercado Livre", instagram.titulo_mercado_livre());
+            assertEquals("mercadolivre", instagram.titulo_mercado_livre());
         }catch (Exception e){
             System.out.println("Tela de login Instgram exibida");
         }
