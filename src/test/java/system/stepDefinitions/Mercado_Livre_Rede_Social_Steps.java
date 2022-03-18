@@ -7,6 +7,8 @@ import system.pages_ml.Instagram_Page_ML;
 import system.pages_ml.Rede_Social_Page_ML;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+//Link Rede Social
+
 public class Mercado_Livre_Rede_Social_Steps {
     Rede_Social_Page_ML rede_social = new Rede_Social_Page_ML();
     Instagram_Page_ML instagram = new Instagram_Page_ML();
