@@ -14,11 +14,12 @@ public class Rede_Social_Page_ML extends Common_Methods {
 
     By link_mais_informacoes = By.cssSelector("body > div.nav-footer-access > label");
     By botao_instagram = By.cssSelector("body > div.nav-footer-access > div > div > div:nth-child(4) > ul > li:nth-child(3)");
+    By botao_cookies = By.xpath("//button[contains(text(),'Entendi')]");
 
     public void click_link_informacoes() throws InterruptedException {
         scrollPage(driver);
         try {
-            driver.findElement(By.id("cookie_action_close_header")).click();
+            click(botao_cookies);
         } catch (Exception e){
         }
 

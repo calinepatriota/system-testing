@@ -4,6 +4,8 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import system.pages_ml.Categorias_Page_ML;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
@@ -23,7 +25,7 @@ public class Mercado_Livre_Busca_Categorias_Steps {
 
     @Então("^a informacao dos eletrodomésticos serão exibidas$")
     public void a_informacao_dos_eletrodomésticos_serão_exibidas() throws InterruptedException {
-        System.out.println("Poduto: "+ (categorias.produto_exibido()));
-        assertNotNull(categorias.produto_exibido());
+        System.out.println("Busca por: "+ (categorias.produto_exibido()));
+        assertEquals(categorias.produto_exibido(),"AS MELHORES OFERTAS");
     }
 }
